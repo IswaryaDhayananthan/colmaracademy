@@ -6,7 +6,7 @@ b{
     width: 100%;
     grid-template: 1fr/6fr 4fr;
     background-color: darkgray;
-    position:relative
+    position:relative;
 }
 .banner{
     margin:24px;
@@ -84,10 +84,12 @@ h1{
                          "a c2";
                          
     height: 500px;
+
 }
 #th1{
     grid-area: c1;
-    padding: 24px;
+    background-color: lightgray;
+    /* padding: 24px; */
 }
 #th2{
     grid-area: c2;
