@@ -89,7 +89,7 @@ h1{
 #th1{
     grid-area: c1;
     background-color: lightgray;
-    /* padding: 24px; */
+     padding: 24px; 
 }
 #th2{
     grid-area: c2;
