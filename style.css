@@ -5,16 +5,19 @@ b{
     display: grid;
     width: 100%;
     grid-template: 1fr/6fr 4fr;
+    grid-template-areas: "ab bc";
     background-color: darkgray;
     position:relative;
 }
 .banner{
     margin:24px;
-    grid-area: 1/1/2/2;
+    /* grid-area: 1/1/2/2; */
+    grid-area: ab;
 }
 .textdoc{
     align-content: center;
-    grid-area: 1/2/2/3;
+    grid-area: bc;
+    /* grid-area: 1/2/2/3; */
     text-align: center;
     position: absolute;
     top:20%;
@@ -83,13 +86,13 @@ h1{
     grid-template-areas: "a c1"
                          "a c2";
                          
-    height: 500px;
+    /* height: 500px; */
 
 }
 #th1{
     grid-area: c1;
     background-color: lightgray;
-     padding: 24px; 
+    padding: 24px; 
 }
 #th2{
     grid-area: c2;
@@ -98,6 +101,131 @@ h1{
 #vdo{
     grid-area: a;
 }
+#f1{
+    /* font-size: 50px; */
+    text-align: left;
+    display: inline-flex;
+    width: 50%;
+}
 footer{
-    margin-top: 16px;
+    border-top: solid 1px lightgray;
+    /* clear: both; */
+    height: 100px;
+    /* float: none !important; */
+    /* margin-top: 16px; */
+    padding: 24px;
+    display: flex;
+   
+
+}
+#f2{
+    /* display: inline-flex; */
+    /* justify-items: right; */
+    /* justify-items: right; */
+    width: 50%;
+}
+#f2 p{
+    text-align: right;
+}
+@media only screen and (max-width: 750px) {
+    .grid{
+        display: grid;
+        /* width: 100%; */
+        grid-template: 2fr/1fr;
+        grid-template-areas: "ab"
+                             "bc"  ;
+        background-color: darkgray;
+    }
+    .banner img{
+      width: 100%;
+      grid-area:ab;
+            }
+
+    .textdoc {
+        /* width: 100%; */
+        background-color: lightgray;
+        grid-area: bc;
+    }
+     
+    .main{
+        display: grid;
+        grid-template: 3fr/1fr;
+        column-gap: 24px;
+        margin: 24px;
+        grid-template-areas: "card1"
+                             "card2"
+                             "card3";
+
+    }
+    #a{
+        display: none;
+    }
+    #b{
+        grid-area: card1;
+        padding: 16px;
+        margin-top: 500px;
+    }   
+    #b img{
+        width: 100%;
+    }
+    
+    #c{
+        grid-area: card2;
+        padding: 16px;
+        margin: 16px;
+    } 
+    #c img{
+        width: 100%;
+    }  
+    #d{
+        grid-area: card3;
+        background-color: lightgray;
+        padding: 16px;
+        margin:16px;
+    }
+    #d img{
+        width:100%;
+    }
+    .div3 img{
+        display: none;
+    }
+    .div5 img{
+        display: None;
+    }
+    #div4 img{
+        display:none
+    }
+    .div5 #th1, #th2{
+        display: none;
+    }
+    #div4 .card-text{
+        display: none;
+    }
+    .div3 .card-text{
+        display: none;
+
+    }
+    .div3 .card-group{
+        display:block;
+        /* background-color: lightgray; */
+        width: 100%;
+        /* row-gap: 8px; */
+        margin: 8px;
+    }
+    .div3 .card{
+        background-color: lightgray; 
+    }
+    .div3 #c1 {
+        margin: 8px;
+        text-align: center;
+
+        /* background-color: lightgray; */
+    }
+    .div3 #c2{
+        margin: 8px;
+        text-align: center;
+    }
+    .div5 .card-group{
+        display: block;
+    }
 }
